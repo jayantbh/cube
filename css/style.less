@@ -1,0 +1,113 @@
+@-webkit-keyframes spin{
+	0%   {transform: rotate3d(1,1,0,0deg);}
+	50% {transform: rotate3d(1,1,1,180deg);}
+	100% {transform: rotate3d(0,1,1,360deg);}
+}
+body{
+	overflow: hidden;
+	margin-top: -150px;
+}
+.container{
+	height: 150px;
+	width: 150px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	margin: auto;
+	transform-style: preserve-3d;
+	-webkit-animation: spin 5s infinite linear;
+	.face{
+		height: 150px;
+		width: 150px;
+		position: absolute;
+	}
+	.f1{
+		transform:;
+		background-color: rgba(100, 255, 100, 0.3);
+	}
+	.f2{
+		transform: translateZ(150px);
+		background-color: rgba(255, 255, 100, 0.3);
+	}
+	.f3{
+		transform: rotateX(90deg) translateZ(75px) translateY(75px);
+		background-color: rgba(0, 255, 200, 0.3);
+	}
+	.f4{
+		transform: rotateX(90deg) translateZ(-75px) translateY(75px);
+		background-color: rgba(100, 155, 250, 0.3);
+	}
+	.f5{
+		transform: rotateY(90deg) translateX(-75px) translateZ(75px);
+		background-color: rgba(100, 25, 200, 0.3);
+	}
+	.f6{
+		transform: rotateY(90deg) translateX(-75px) translateZ(-75px);
+		background-color: rgba(200, 55, 100, 0.3);
+	}
+}
+.one{
+	left: -300px;
+}
+.three{
+	right: -300px;
+}
+.four{
+	left: -300px;
+	top: -300px;
+}
+.five{
+	right: -300px;
+	top: -300px;
+}
+.six{
+	top: -300px;
+}
+.seven{
+	left: -300px;
+	bottom: -300px;
+}
+.eight{
+	right: -300px;
+	bottom: -300px;
+}
+.nine{
+	bottom: -300px;
+}
+.cubegrid-container{
+	height: 900px;
+	width: 1920px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	left: 450;
+	margin: auto;
+}
+.cubegrid{
+	height: 450px;
+	width: 450px;
+	position: absolute;
+	&.one{
+		left: 100px;
+	}
+	&.two{
+		left: 550px;
+	}
+	&.three{
+		left: 1000px;
+	}
+	&.four{
+		left: 100px;
+		top: 450px;
+	}
+	&.five{
+		left: 550px;
+		top: 450px;
+	}
+	&.six{
+		left: 1000px;
+		top: 450px;
+	}
+}
